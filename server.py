@@ -10,4 +10,6 @@ params = {
     "location": "Altamonte Springs, FL"
 }
 response = requests.get(url, headers=headers, params=params)
-print(response.text)
+businesses = response.json()["businesses"]
+for business in businesses:
+    print(business["name"])
