@@ -6,6 +6,7 @@ headers = {
     "Authorization": "Bearer " + api_key
 }
 params = {
+    "term": "Pizza",  # term = Keyword
     "location": "Altamonte Springs, FL"
 }
 response = requests.get(url, headers=headers, params=params)
